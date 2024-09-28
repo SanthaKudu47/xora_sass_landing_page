@@ -13,6 +13,10 @@ export default {
         p3: "#0A1D41", //mobile button border color
         p4: "#1959ad", //mobile nav gradient color
         p5: "#0c1838", //mobile menu bg color
+        p6: "#1959AD", //social icon border highlight color
+        p7: "#0D244F", //social icon border color
+        tp1: "#eaedff", //text primary color
+        th: "#2EF2FF",
       },
     },
   },
