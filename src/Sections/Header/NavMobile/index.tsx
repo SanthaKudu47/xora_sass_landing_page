@@ -12,15 +12,17 @@ function NavMobile() {
   const dispatch = useDispatch();
   const isScrolled = useIsScrolled();
 
+  console.log("isC", isScrolled);
+
   const menuClickHandler = function () {
     isOpened === false
       ? dispatch("common", { type: "menuOpened" })
       : dispatch("common", { type: "menuClosed" });
   };
-  console.log("Nav rendering...");
+  console.log("Nav rendering...", isScrolled);
   return (
     <>
-      <div className="left-0 right-0  fixed h-[88px] top-0 py-2 px-4 flex items-center z-30">
+      <div className="left-0 right-0  fixed h-[88px] top-0 px-4 flex items-center z-30 ">
         <div className="flex w-full my-auto items-center justify-between">
           <img src={logoImage} alt="logo_img" width={116} height={40} />
 
@@ -38,7 +40,7 @@ function NavMobile() {
 
       <div
         className={`top-0 fixed h-[88px]  w-full z-20 transition-[background] duration-300 ease-in delay-0  ${
-          isScrolled ? "bg-p1" : "backdrop-blur-sm bg-pi/30"
+          isScrolled ? "backdrop-blur-sm bg-p1" : "backdrop-blur-sm bg-p1/10"
         } `}
       ></div>
 

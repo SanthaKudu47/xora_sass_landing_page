@@ -17,6 +17,8 @@ export default {
         p7: "#0D244F", //social icon border color
         tp1: "#eaedff", //text primary color
         th: "#2EF2FF",
+        tp2: "#C4CBF5",
+        caption1: "#C8EA80", //caption one color
       },
     },
   },
