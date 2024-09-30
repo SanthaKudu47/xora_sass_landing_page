@@ -1,3 +1,4 @@
+import ButtonV1 from "../../components/nav/common/ButtonV1";
 import heroImage from "/hero.png";
 
 function Hero() {
@@ -15,7 +16,7 @@ function Hero() {
           and surprisingly powerful.
         </p>
 
-        <div className="my-10">button</div>
+        <div className="my-3"><ButtonV1 label="try it now"/></div>
       </div>
 
       <div className="flex overflow-hidden bg-slate-100 w-full">

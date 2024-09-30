@@ -19,6 +19,10 @@ export default {
         th: "#2EF2FF",
         tp2: "#C4CBF5",
         caption1: "#C8EA80", //caption one color
+        buttonBorderBase: "#0F173C",
+        buttonBorderHighLight: "#2876A5",
+        buttonGradientColor1: "#253575",
+        buttonGradientColor2: "#162561",
       },
     },
   },
