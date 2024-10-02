@@ -16,8 +16,23 @@
   }
 
   .mobile_nav_bg_add {
-    @apply bg-white/0
+    @apply bg-white/0;
   }
 
-  ;
+  .feature_card_bg {
+    @apply bg-gradient-to-t from-p8 to-p9;
+  }
+
+  .buttonV1_bg {
+    @apply bg-gradient-to-t from-buttonGradientColor2 to-buttonGradientColor1;
+  }
+
+  .buttonV1_bg_hovered {
+    @apply bg-gradient-to-t from-btnHoveredG1 to-btnHoveredG2;
+  }
+
+
+
+
+
 }
