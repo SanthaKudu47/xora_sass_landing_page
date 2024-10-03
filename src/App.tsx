@@ -18,7 +18,7 @@ function App() {
         <Header />
       </main>
       <Hero />
-      {/* <Features/> */}
+      <Features/>
       {/* <div className="w-full h-screen bg-red-500">
         section
       </div> */}

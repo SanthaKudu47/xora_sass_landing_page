@@ -5,7 +5,7 @@ function Container({
   cls = "",
 }: {
   children: ReactNode;
-  cls: string;
+  cls?: string;
 }) {
   return (
     <div className={`relative flex  max-w-[1252px] ${cls}`}>{children}</div>
