@@ -22,6 +22,9 @@ export default {
         p12: "#293775",
         p13: "#141D46",
         p14: "#0C1838",
+        p15: "#1959ad",
+        p16: "#0D2552",
+        p17: "#172C6A",
         tp1: "#eaedff", //text primary color
         th: "#2EF2FF",
         tp2: "#C4CBF5",
