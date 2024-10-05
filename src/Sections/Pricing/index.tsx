@@ -1,4 +1,5 @@
 import { Container } from "../../components/nav/common/Container";
+import PricingCards from "./Cards";
 import Switch from "./Switch";
 import lineArt from "/line_art.svg";
 export default function Pricing() {
@@ -22,7 +23,11 @@ export default function Pricing() {
               <div className="bg-p15 blur-[400px]  rounded-full z-0 w-[400px] h-[400px]  relative top-[100px] lg:top-[120px]"></div>
             </div>
           </div>
+         
         </div>
+        <div className="w-full flex justify-center z-40 -mt-[100px]">
+            <PricingCards />
+          </div>
       </Container>
     </div>
   );

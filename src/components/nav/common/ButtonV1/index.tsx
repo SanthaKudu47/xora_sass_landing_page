@@ -1,14 +1,16 @@
 import zapIcon from "/zap.svg";
 import "./styles.css";
 import Marker from "./Marker";
-import { Children, ReactNode } from "react";
+import { ReactNode } from "react";
 
 function ButtonV1({
   label = "My Button",
   children = null,
+  isMarkerLighted = false,
 }: {
   label?: string;
   children?: ReactNode;
+  isMarkerLighted?: boolean;
 }) {
   const icon = children ? (
     children
@@ -26,7 +28,7 @@ function ButtonV1({
 
         <div className="flex items-center p-0 gap-5 ">
           <span className="absolute left-0">
-            <Marker />
+            <Marker fill={isMarkerLighted ? '#c8ea80':'#2ef2ff'} />
           </span>
           {icon}
           <h4 className="font-baseFont text-th font-semibold uppercase">
