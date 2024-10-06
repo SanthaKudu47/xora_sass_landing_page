@@ -1,9 +1,13 @@
 import PriceCardsDesktop from "./desktop";
 
-export default function PricingCards() {
+export default function PricingCards({
+  subscriptionType = "monthly",
+}: {
+  subscriptionType: "monthly" | "annually";
+}) {
   return (
     <div>
-      <PriceCardsDesktop />
+      <PriceCardsDesktop subscriptionType={subscriptionType} />
     </div>
   );
 }

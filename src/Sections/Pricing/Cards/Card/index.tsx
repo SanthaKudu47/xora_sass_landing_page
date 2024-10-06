@@ -2,35 +2,65 @@ import check from "/check.png";
 import ButtonV1 from "../../../../components/nav/common/ButtonV1";
 import { useEffect } from "react";
 
-let timer: number | undefined = undefined;
+let timer: {
+  middle: number | undefined;
+  left: number | undefined;
+  right: number | undefined;
+} = {
+  middle: undefined,
+  left: undefined,
+  right: undefined,
+};
 let valueFrom = {
   middle: 0,
   left: 0,
   right: 0,
 };
+const elements: {
+  middle: HTMLSpanElement | null;
+  left: HTMLSpanElement | null;
+  right: HTMLSpanElement | null;
+} = {
+  middle: null,
+  left: null,
+  right: null,
+};
 
-function updatePriceValue(valueTo: number) {
-  const span = document.getElementById("price");
-  const id = span?.dataset["id"] as "middle" | "left" | "right";
-  if (!span || !id) return;
+function updatePriceValue(
+  valueTo: number,
+  card: HTMLSpanElement,
+  id: "middle" | "left" | "right"
+) {
   if (valueFrom[id] < valueTo) {
     valueFrom[id] = valueFrom[id] + 1;
-    console.log("in logic", valueFrom);
-    span.innerHTML = valueFrom[id].toString();
-    timer = setTimeout(() => {
-      updatePriceValue(valueTo);
-    }, 50);
+    console.log("in logic", id);
+    card.innerHTML = valueFrom[id].toString();
+    timer[id] = setTimeout(() => {
+      updatePriceValue(valueTo, card, id);
+    }, 25);
   } else {
-    if (timer) clearInterval(timer);
+    if (timer[id]) clearInterval(timer[id]);
   }
 }
 
-function incrementAnimation(valueFromP: number, valueTo: number) {
-  const span = document.getElementById("price");
-  const id = span?.dataset["id"] as "middle" | "left" | "right";
-  if (!span || !id) return;
-  valueFrom[id] = valueFromP;
-  updatePriceValue(valueTo);
+function incrementAnimation(
+  valueFromP: number,
+  valueTo: { middle: number; left: number; right: number }
+) {
+  const spans = document.getElementsByClassName(
+    "priceCard"
+  ) as HTMLCollectionOf<Element>;
+  if (spans && spans.length === 3) {
+    for (let index = 0; index < spans.length; index++) {
+      const card = spans[index] as HTMLSpanElement;
+      const id = card.dataset["id"] as "middle" | "left" | "right";
+      if (!card || !id) return;
+      elements[id] = card;
+
+      valueFrom[id] = valueFromP;
+      updatePriceValue(valueTo[id], elements[id], id);
+    }
+  }
 }
 
 export default function Card({
@@ -43,6 +73,7 @@ export default function Card({
   pricePlanImgSrc,
   selected = false,
   place = "middle",
+  subPlan = "monthly",
 }: {
   caption: string;
   price: string;
@@ -53,11 +84,15 @@ export default function Card({
   pricePlanImgSrc: string;
   selected: boolean;
   place: "left" | "right" | "middle";
+  subPlan: "monthly" | "annually";
 }) {
   useEffect(() => {
-    console.log("cards...");
-    incrementAnimation(5, 85);
-  }, []);
+    console.log(subPlan);
+    if (subPlan === "monthly")
+      incrementAnimation(0, { middle: 79, left: 17, right: 39 });
+    if (subPlan === "annually")
+      incrementAnimation(0, { middle: 59, left: 12, right: 29 });
+  }, [subPlan]);
   return (
     <div
       className={`w-[370px]  ${
@@ -103,7 +138,7 @@ export default function Card({
           } text-[80px] flex justify-center  relative`}
         >
           <span>$</span>
-          <span id="price" data-id={place}>
+          <span className="priceCard" data-id={place}>
             {price}
           </span>
           <span className="absolute text-tp2 text-[17px] uppercase right-10 top-5">

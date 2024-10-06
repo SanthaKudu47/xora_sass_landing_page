@@ -1,13 +1,17 @@
 import { useState } from "react";
 
-export default function Switch() {
-  const [switchState, setSwitchState] = useState<"M" | "A">("M");
-
+export default function Switch({
+  subPlan,
+  setSubPlan,
+}: {
+  subPlan: "monthly" | "annually";
+  setSubPlan: React.Dispatch<React.SetStateAction<"monthly" | "annually">>;
+}) {
   const switchHandler = (id = "M") => {
-    if (switchState === id) {
+    if (subPlan === "monthly" && id === "M") {
       return;
     }
-    setSwitchState(switchState === "M" ? "A" : "M");
+    setSubPlan(subPlan === "monthly" ? "annually" : "monthly");
   };
   return (
     <div className="bg-white h-[75px] w-[350px] rounded-[20px] flex justify-center items-center border-[4px]  border-solid border-p16 bg-gradient-to-t from-p12 to-p11">
@@ -31,7 +35,7 @@ export default function Switch() {
           </span>
           <div
             className={`flex absolute top-0 bottom-0  rounded-[13px] m-1 bg-p12 overflow-hidden transition-[left,right] duration-200 delay-0 ease-in ${
-              switchState == "M"
+              subPlan == "monthly"
                 ? "left-0 right-[calc(50%)]"
                 : "left-[calc(50%)] right-0"
             }`}

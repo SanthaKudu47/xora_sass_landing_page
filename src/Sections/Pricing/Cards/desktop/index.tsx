@@ -1,11 +1,17 @@
 import { priceCardData } from "../../data/data";
 import Card from "../Card";
 
-export default function PriceCardsDesktop() {
+export default function PriceCardsDesktop({
+  subscriptionType = "monthly",
+}: {
+  subscriptionType: "monthly" | "annually";
+}) {
+  
   return (
     <div className="flex flex-row items-center">
       <div className="relative left-2 z-0">
         <Card
+          subPlan={subscriptionType}
           caption={priceCardData[1].caption}
           features={priceCardData[1].features}
           price={priceCardData[1].price}
@@ -19,6 +25,7 @@ export default function PriceCardsDesktop() {
 
       <div className="relative z-10">
         <Card
+          subPlan={subscriptionType}
           caption={priceCardData[0].caption}
           features={priceCardData[0].features}
           price={priceCardData[0].price}
@@ -32,6 +39,7 @@ export default function PriceCardsDesktop() {
 
       <div className="relative right-2 z-0">
         <Card
+          subPlan={subscriptionType}
           caption={priceCardData[2].caption}
           features={priceCardData[2].features}
           price={priceCardData[2].price}
