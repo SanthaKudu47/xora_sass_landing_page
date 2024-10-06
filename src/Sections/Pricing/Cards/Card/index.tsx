@@ -33,7 +33,6 @@ function updatePriceValue(
 ) {
   if (valueFrom[id] < valueTo) {
     valueFrom[id] = valueFrom[id] + 1;
-    console.log("in logic", id);
     card.innerHTML = valueFrom[id].toString();
     timer[id] = setTimeout(() => {
       updatePriceValue(valueTo, card, id);
@@ -50,7 +49,7 @@ function incrementAnimation(
   const spans = document.getElementsByClassName(
     "priceCard"
   ) as HTMLCollectionOf<Element>;
-  if (spans && spans.length === 3) {
+  if (spans && spans.length === 6) {
     for (let index = 0; index < spans.length; index++) {
       const card = spans[index] as HTMLSpanElement;
       const id = card.dataset["id"] as "middle" | "left" | "right";
@@ -87,7 +86,6 @@ export default function Card({
   subPlan: "monthly" | "annually";
 }) {
   useEffect(() => {
-    console.log(subPlan);
     if (subPlan === "monthly")
       incrementAnimation(0, { middle: 79, left: 17, right: 39 });
     if (subPlan === "annually")
@@ -95,19 +93,19 @@ export default function Card({
   }, [subPlan]);
   return (
     <div
-      className={`w-[370px]  ${
+      className={`min-w-[340px] max-w-[350px] lg:w-[370px]  ${
         place === "middle"
           ? "rounded-[40px]"
           : place === "left"
-          ? "lg:rounded-l-[40px]"
-          : "lg:rounded-r-[40px]"
+          ? "rounded-l-[40px] rounded-r-[40px] lg:rounded-r-[0px]"
+          : "rounded-l-[40px] rounded-r-[40px] lg:rounded-l-[0px]"
       }     border-2 border-pcBorderLight border-solid relative`}
     >
       <div className="absolute left-0 right-0 z-20">
         <img
           src={pricePlanImgSrc}
           alt="plan_icon"
-          className="w-[80px] h-[80px] mx-auto -mt-5"
+          className="w-[80px] h-[80px] mx-auto -mt-5 lg:-mt-[40px]"
         />
       </div>
       <div
@@ -117,8 +115,8 @@ export default function Card({
           place === "middle"
             ? "rounded-t-[36px]"
             : place === "left"
-            ? "rounded-l-[36px]"
-            : "rounded-r-[36px]"
+            ? "rounded-t-[36px] rounded-l-[36px]"
+            : "rounded-t-[36px] rounded-r-[36px]"
         }  px-5  m-[2px] pt-[100px] flex justify-center flex-col `}
       >
         <div
@@ -161,8 +159,8 @@ export default function Card({
           place === "middle"
             ? "rounded-[38px]"
             : place === "left"
-            ? "rounded-l-[38px]"
-            : "rounded-r-[38px]"
+            ? "rounded-l-[38px] rounded-r-[38px] lg:rounded-r-[0px]"
+            : "rounded-l-[38px] rounded-r-[38px] lg:rounded-l-[0px]"
         }`}
       >
         <div className="pt-[320px] pl-[56px]">

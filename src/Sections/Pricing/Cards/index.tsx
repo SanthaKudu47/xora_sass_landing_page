@@ -1,4 +1,5 @@
 import PriceCardsDesktop from "./desktop";
+import PriceCardsMobile from "./mobile";
 
 export default function PricingCards({
   subscriptionType = "monthly",
@@ -6,8 +7,13 @@ export default function PricingCards({
   subscriptionType: "monthly" | "annually";
 }) {
   return (
-    <div>
-      <PriceCardsDesktop subscriptionType={subscriptionType} />
-    </div>
+    <>
+      <div className="hidden lg:flex">
+        <PriceCardsDesktop subscriptionType={subscriptionType} />
+      </div>
+      <div className="flex lg:hidden">
+        <PriceCardsMobile  subscriptionType={subscriptionType} />
+      </div>
+    </>
   );
 }
