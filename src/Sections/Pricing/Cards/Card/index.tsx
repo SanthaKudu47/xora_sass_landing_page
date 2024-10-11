@@ -139,7 +139,7 @@ export default function Card({
           <span className="priceCard" data-id={place}>
             {price}
           </span>
-          <span className="absolute text-tp2 text-[17px] uppercase right-10 top-5">
+          <span className="absolute text-tp2 text-[17px] uppercase right-8 top-5">
             / mo
           </span>
         </div>

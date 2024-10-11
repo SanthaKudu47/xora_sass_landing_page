@@ -31,6 +31,10 @@
     @apply bg-gradient-to-t from-btnHoveredG1 to-btnHoveredG2;
   }
 
+  .qaButtonBorderEffect {
+    @apply hover:border-p15 border-2 border-solid border-p12 rounded-full cursor-pointer transition-all delay-0 duration-100 ease-in
+  }
+
 
 
 

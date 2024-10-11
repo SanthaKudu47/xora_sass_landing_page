@@ -47,6 +47,8 @@ export default {
         pcCardSelectedGradientFrom: "#0E1535",
         pcCardSelectedYellowLight: "#c8ea80",
         p18: "#2DE9F6",
+        qaButtonLight: "#1C4F9D",
+        qaButtonBase: "#172765",
       },
     },
   },

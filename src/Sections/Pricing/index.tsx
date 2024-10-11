@@ -8,10 +8,10 @@ export default function Pricing() {
     "monthly"
   );
   return (
-    <div className="relative">
+    <div className="relative h-[1165px] lg:h-[1220px]">
       <Container cls="flex-col items-center mx-auto relative">
-        <div>
-          <div className="w-full overflow-hidden pb-[250px]  px-5 -mt-9 lg:mt-0">
+        <div className="flex relative">
+          <div className="w-full overflow-hidden pb-[250px]  px-5 sm:px-20 -mt-9 lg:mt-0">
             <div className="relative w-full lg:w-[950px] h-[550px] lg:h-[600px] flex mx-auto lg:border-x-2 border-solid border-buttonBorderBase justify-center">
               <h2 className="z-20 font-baseFont text-[32px] md:text-[48px] font-semibold text-tp1 text-center mt-[130px] lg:mt-[120px] leading-10 lg:leading-[60px] px-9">
                 Flexible pricing <br />

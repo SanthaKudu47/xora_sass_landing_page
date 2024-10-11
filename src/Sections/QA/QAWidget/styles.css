@@ -1,0 +1,5 @@
+.resizeAnimation {
+   
+    transition: grid-template-rows 500ms ease-out 0s;
+
+}
