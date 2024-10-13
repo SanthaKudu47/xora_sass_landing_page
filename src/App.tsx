@@ -6,6 +6,7 @@ import Header from "./Sections/Header";
 import Hero from "./Sections/Hero";
 import Pricing from "./Sections/Pricing";
 import QA from "./Sections/QA";
+import Testimonials from "./Sections/Testimonials";
 
 function App() {
   console.log("App ...Rendering...");
@@ -23,6 +24,7 @@ function App() {
       <Features/>
       <Pricing/>
       <QA/>
+      <Testimonials/>
       {/* <div className="w-full h-screen bg-red-500">
         section
       </div> */}

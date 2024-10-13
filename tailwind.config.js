@@ -25,6 +25,7 @@ export default {
         p15: "#1959ad",
         p16: "#0D2552",
         p17: "#172C6A",
+        p19:'#0A163D',
         tp1: "#eaedff", //text primary color
         th: "#2EF2FF",
         tp2: "#C4CBF5",

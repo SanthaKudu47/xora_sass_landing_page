@@ -26,12 +26,12 @@ function ExpandButton({
 }) {
   return (
     <div
-      className="flex justify-center items-center overflow-hidden p-[3px] qaButtonBorderEffect"
+      className="flex justify-center items-center overflow-hidden p-1 qaButtonBorderEffect"
       onClick={clickHandler}
     >
-      <div className="w-[40px] h-[40px] rounded-full relative bg-qaButtonLight overflow-hidden flex justify-center items-center mx-auto">
-        <span className="relative top-1">
-          <span className="w-[36px] h-[36px] rounded-full  bg-qaButtonBase text-center flex justify-center items-center blur-sm" />
+      <div className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] rounded-full relative bg-qaButtonLight overflow-hidden flex justify-center items-center mx-auto">
+        <span className="relative top-1 flex">
+          <span className="w-[32px] h-[32px] lg:w-[36px] lg:h-[36px] rounded-full  bg-qaButtonBase text-center flex justify-center items-center blur-sm" />
         </span>
       </div>
       <span className="absolute flex inset-0 justify-start items-center  text-caption1  font-baseFont text-[30px]">
@@ -39,9 +39,9 @@ function ExpandButton({
           <div className="w-[15px] h-[4px] bg-caption1 relative top-[2px]" />
           <div
             className={`w-[15px] h-[4px] ${
-              isOpen ? "bg-caption1" : "bg-th"
+              isOpen ? "bg-caption1" : "bg-caption1"
             } origin-center transition-all duration-200 ease-in-out delay-0 ${
-              isOpen && "rotate-90"
+              isOpen ? "bg-th" :" rotate-90 bg-caption1"
             } relative -top-[2px]`}
           ></div>
         </div>
@@ -69,7 +69,7 @@ export default function QAWidget({
 
   return (
     <div
-      className={`flex flex-col text-white w-full px-5 rounded-3xl  p-3 bg-p1 overflow-hidden relative ${
+      className={`flex flex-col text-white w-full px-0 lg:px-5 rounded-3xl  p-3 bg-p1 overflow-hidden relative ${
         isOpen ? "" : "bg-p1 "
       } `}
     >
@@ -84,7 +84,7 @@ export default function QAWidget({
         <div className="hidden lg:block text-caption1 font-baseFont">
           {questionNumber}
         </div>
-        <div className="flex flex-row justify-between items-center text-tp1 text-[24px] font-baseFont w-full mx-auto">
+        <div className="flex flex-row justify-between items-center text-tp1 text-[24px] font-baseFont w-full mx-auto gap-3">
           <span className={`flex ${isOpen && "text-th"}`}>{question}</span>
           <span className="flex w-[50px] justify-center relative">
             <ExpandButton clickHandler={clickHandler} isOpen={isOpen} />
@@ -96,7 +96,7 @@ export default function QAWidget({
             isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
           }`}
         >
-          <div className="text-[18px] text-tp2 leading-7 pr-5 text-left flex  overflow-hidden">
+          <div className="text-[18px] text-tp2 leading-7 pr-0 lg:pr-5 text-left flex  overflow-hidden">
             {answer}
           </div>
         </div>

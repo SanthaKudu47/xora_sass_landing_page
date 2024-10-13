@@ -5,8 +5,8 @@ export default function QAHeader() {
     <div>
       <Container cls="flex-col mx-auto ">
         <div className="font-baseFont relative">
-          <div className="relative z-10 my-[100px]  lg:my-[140px]  px-14 md:max-w-[420px] lg:max-w-[790px] ">
-            <h2 className="text-[32px] lg:text-[48px] font-semibold text-tp1 leading-[50px]">
+          <div className="relative z-10 my-[100px]  lg:my-[140px]  px-10 lg:px-14 md:max-w-[450px] lg:max-w-[790px] ">
+            <h2 className="text-[32px] md:text-[45px] lg:text-[48px] font-semibold text-tp1 leading-[50px]">
               Curiosity didn’t kill the cat, it got answers.
             </h2>
             <h4 className="text-[22px] text-tp2 mt-7">

@@ -71,14 +71,14 @@ export default function QA() {
     <div>
       <QAHeader />
       <div className="relative flex  mx-auto flex-col">
-        <div className="flex border-t-2 border-solid border-buttonBorderBase">
-          <div className="w-[80px] h-[80px] bg-p1 mx-auto rounded-full -mt-[40px] border-2 border-sold border-buttonBorderBase flex justify-center items-center">
+        <div className="flex border-t-2 border-solid border-p19">
+          <div className="w-[80px] h-[80px] bg-p1 mx-auto rounded-full -mt-[40px] border-2 border-sold border-p19 flex justify-center items-center">
             <img src={faqImage} className="w-[40px] h-[40px]" alt="qa_img" />
           </div>
         </div>
         <Container cls="flex  mx-auto lg:flex-col">
           <div className="flex lg:grid lg:grid-cols-2 flex-col">
-            <div className="lg:col-span-1 p-5 gap-5 flex flex-col lg:border-r-2 lg:border-solid lg:border-buttonBorderBase">
+            <div className="lg:col-span-1 p-5 gap-5 flex flex-col lg:border-r-2 lg:border-solid lg:border-p19">
               {qaData.slice(0, 5).map((qaData, index) => {
                 return (
                   <div className="flex">
@@ -108,7 +108,9 @@ export default function QA() {
             </div>
           </div>
         </Container>
-        <div className="flex w-full border-t-2 border-solid border-buttonBorderBase"></div>
+        <div className="flex w-full border-t-2 border-solid border-p19">
+          <div className="mx-auto w-[10px] h-[10px] rounded-full -mt-[5px] border-2 border-solid border-p19 bg-p1"></div>
+        </div>
       </div>
     </div>
   );
