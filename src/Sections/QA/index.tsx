@@ -108,8 +108,8 @@ export default function QA() {
             </div>
           </div>
         </Container>
-        <div className="flex w-full border-t-2 border-solid border-p19">
-          <div className="mx-auto w-[10px] h-[10px] rounded-full -mt-[5px] border-2 border-solid border-p19 bg-p1"></div>
+        <div className="flex w-full">
+          <div className="mx-auto w-[10px] h-[10px] rounded-full border-2 border-solid border-p19 bg-p1"></div>
         </div>
       </div>
     </div>

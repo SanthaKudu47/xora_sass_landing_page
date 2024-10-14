@@ -25,7 +25,7 @@ export default {
         p15: "#1959ad",
         p16: "#0D2552",
         p17: "#172C6A",
-        p19:'#0A163D',
+        p19: "#0A163D",
         tp1: "#eaedff", //text primary color
         th: "#2EF2FF",
         tp2: "#C4CBF5",
@@ -50,6 +50,7 @@ export default {
         p18: "#2DE9F6",
         qaButtonLight: "#1C4F9D",
         qaButtonBase: "#172765",
+        p20: "#0E1434",
       },
     },
   },

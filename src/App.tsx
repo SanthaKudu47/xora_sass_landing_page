@@ -1,6 +1,7 @@
 import "./App.css";
 import { selectMenuStatus } from "./context";
 import useSelector from "./hooks/useSelector";
+import Download from "./Sections/Download";
 import Features from "./Sections/Features";
 import Header from "./Sections/Header";
 import Hero from "./Sections/Hero";
@@ -25,6 +26,7 @@ function App() {
       <Pricing/>
       <QA/>
       <Testimonials/>
+      <Download/>
       {/* <div className="w-full h-screen bg-red-500">
         section
       </div> */}
