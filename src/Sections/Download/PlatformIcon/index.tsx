@@ -6,7 +6,7 @@ import "./styles.css";
 
 function PlatformIcon({ children = <IosIcon /> }: { children: ReactNode }) {
   return (
-    <div className="platform_icon_container relative w-[88px] h-[88px] rounded-full bg-p1 border-2 border-solid border-buttonBorderBase p-1 hover:border-blue-500 cursor-pointer flex justify-center">
+    <div className="platform_icon_container relative w-[88px] h-[88px] rounded-full bg-p1 border-2 border-solid border-buttonBorderBase p-1 hover:border-blue-500 cursor-pointer flex justify-center shrink-0">
       <div
         className="absolute z-10 flex justify-center -top-[1.5px]
       w-full"
