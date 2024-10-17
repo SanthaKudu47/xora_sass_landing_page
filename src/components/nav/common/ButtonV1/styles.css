@@ -1,0 +1,34 @@
+.light {
+    opacity: 0;
+    position: relative;
+    transition: left 0.3s ease-in 0s, right 0.3s ease-in 0s, opacity 500ms ease-in 0.0s;
+    background: linear-gradient(90deg, transparent, #2ef2ff, transparent);
+}
+
+.light_top {
+    left: 30px;
+}
+
+.light_bottom {
+    right: 30px;
+}
+
+.buttonV1:hover .light_top {
+    opacity: 1;
+    left: 0px;
+
+}
+
+.buttonV1:hover .light_bottom {
+    opacity: 1;
+    right: 0px;
+
+}
+
+.buttonV1_opacity {
+    opacity: 1;
+}
+
+.buttonV1:hover .buttonV1_opacity {
+    opacity: 0;
+}

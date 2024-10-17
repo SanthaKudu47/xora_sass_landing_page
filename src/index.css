@@ -1,68 +1,42 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  html {
+    @apply bg-p1;
   }
-  a:hover {
-    color: #747bff;
+
+  .mobile_nav_bg {
+    @apply transition-['background'] backdrop-blur-sm duration-500 ease-linear delay-0 relative z-0;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .mobile_nav_bg_remove {
+    @apply bg-p2;
   }
+
+  .mobile_nav_bg_add {
+    @apply bg-white/0;
+  }
+
+  .feature_card_bg {
+    @apply bg-gradient-to-t from-p8 to-p9;
+  }
+
+  .buttonV1_bg {
+    @apply bg-gradient-to-t from-buttonGradientColor2 to-buttonGradientColor1;
+  }
+
+  .buttonV1_bg_hovered {
+    @apply bg-gradient-to-t from-btnHoveredG1 to-btnHoveredG2;
+  }
+
+  .qaButtonBorderEffect {
+    @apply hover:border-p15 border-2 border-solid border-p12 rounded-full cursor-pointer transition-all delay-0 duration-100 ease-in
+  }
+
+
+
+
+
 }
