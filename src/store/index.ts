@@ -1,4 +1,4 @@
-import { commonActionType, reducer, storeOptions } from "../context/types";
+import { commonActionType,  storeOptions } from "../context/types";
 
 type listenerCallback = () => void;
 type store = {
@@ -100,7 +100,7 @@ function configureStore<ReducerT, InitialStateT>(
     options.layerName,
     options.initialState
   );
-  type StoreType = ReturnType<typeof stConfig.getStore>;
+ // type StoreType = ReturnType<typeof stConfig.getStore>;
   return stConfig;
 }
 

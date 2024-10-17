@@ -2,7 +2,7 @@ import { Container } from "../../components/nav/common/Container";
 import QAHeader from "./Header";
 import QAWidget from "./QAWidget";
 
-import faqImage from "../../../public/faq-logo.svg";
+import faqImage from "/faq-logo.svg";
 const qaData = [
   {
     questionNumber: "01",
@@ -81,7 +81,7 @@ export default function QA() {
             <div className="lg:col-span-1 p-5 gap-5 flex flex-col lg:border-r-2 lg:border-solid lg:border-p19">
               {qaData.slice(0, 5).map((qaData, index) => {
                 return (
-                  <div className="flex">
+                  <div className="flex" key={index}>
                     <QAWidget
                       answer={qaData.answer}
                       question={qaData.question}
@@ -95,7 +95,7 @@ export default function QA() {
             <div className="lg:col-span-1 p-5 gap-5 flex flex-col">
               {qaData.slice(5, 10).map((qaData, index) => {
                 return (
-                  <div className="flex">
+                  <div className="flex" key={index}>
                     <QAWidget
                       answer={qaData.answer}
                       question={qaData.question}

@@ -2,7 +2,6 @@ import { ReactNode } from "react";
 import ButtonV1 from "../../../../components/nav/common/ButtonV1";
 import Caption from "../../../../components/nav/common/Caption";
 import CaptionV1 from "../../../../components/nav/common/CaptionV1/CaptionV1";
-import magicTouch from "/magictouch.svg";
 
 function FeatureCard({
   caption1Text = "easy integration",

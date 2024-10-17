@@ -1,19 +1,13 @@
-import {
-  MouseEvent,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import { MouseEvent, useState } from "react";
 
 import "./styles.css";
 
-const data = {
-  questionNumber: "1",
-  question: "How easy is it to setup Xora?",
-  answer:
-    "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
-};
+// const data = {
+//   questionNumber: "1",
+//   question: "How easy is it to setup Xora?",
+//   answer:
+//     "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+// };
 
 function ExpandButton({
   clickHandler,
@@ -41,7 +35,7 @@ function ExpandButton({
             className={`w-[15px] h-[4px] ${
               isOpen ? "bg-caption1" : "bg-caption1"
             } origin-center transition-all duration-200 ease-in-out delay-0 ${
-              isOpen ? "bg-th" :" rotate-90 bg-caption1"
+              isOpen ? "bg-th" : " rotate-90 bg-caption1"
             } relative -top-[2px]`}
           ></div>
         </div>

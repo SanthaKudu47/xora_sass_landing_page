@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./App.css";
 import { selectMenuStatus } from "./context";
 import useSelector from "./hooks/useSelector";
@@ -10,15 +11,21 @@ import Pricing from "./Sections/Pricing";
 import QA from "./Sections/QA";
 import Testimonials from "./Sections/Testimonials";
 
+let scrollY = window.scrollY;
+
 function App() {
-  console.log("App ...Rendering...");
-  const isOpened = useSelector(selectMenuStatus, "common");
+  const isOpened = useSelector(selectMenuStatus, "common") as boolean;
+  useEffect(() => {
+    if (isOpened) {
+      scrollY = window.scrollY;
+      document.body.style.position = "fixed";
+    } else {
+      document.body.style.position = "";
+      window.scrollTo(0, +scrollY);
+    }
+  }, [isOpened]);
   return (
-    <div
-      className={`relative overflow-auto ${
-        isOpened ? "h-screen overflow-hidden" : ""
-      }`}
-    >
+    <div className="relative">
       <main className="relative flex ">
         <Header />
       </main>
@@ -29,9 +36,6 @@ function App() {
       <Testimonials />
       <Download />
       <Footer />
-      {/* <div className="w-full h-screen bg-red-500">
-        section
-      </div> */}
     </div>
   );
 }

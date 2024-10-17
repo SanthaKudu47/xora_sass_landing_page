@@ -48,15 +48,15 @@ function commonUtilsReducer(
   }
 }
 
-function createReducerWithTypes<TypeState, TypeAction>(reducer: any) {
-  return function (initialState: TypeState, action: TypeAction) {
-    reducer(initialState, action);
-  };
-}
+// function createReducerWithTypes<TypeState, TypeAction>(reducer: any) {
+//   return function (initialState: TypeState, action: TypeAction) {
+//     reducer(initialState, action);
+//   };
+// }
 
-const reducer = createReducerWithTypes<commonUtilsType, commonUtilsActionObj>(
-  commonUtilsReducer
-);
+// const reducer = createReducerWithTypes<commonUtilsType, commonUtilsActionObj>(
+//   commonUtilsReducer
+// );
 const openMenu = function (dispatch: (action: commonUtilsActionObj) => void) {
   dispatch({ type: "menuOpened" });
 };

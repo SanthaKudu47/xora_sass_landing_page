@@ -7,15 +7,18 @@ import {
 } from "../../assets/svg";
 import Marker from "../../components/nav/common/ButtonV1/Marker";
 import { Container } from "../../components/nav/common/Container";
-import lines from "../../../public/lines.svg";
+import lines from "/lines.svg";
 import SocialMediaButton from "../../components/nav/SocialMediaButton";
-import Logo from "../../../public/faq-logo.svg";
+import Logo from "/faq-logo.svg";
 
 function Footer() {
   return (
     <div className="overflow-hidden flex-col relative mx-auto flex w-full">
       <div className="absolute -top-[150px] md:top-[300px] lg:-top-[150px] justify-end md:justify-center left-0 right-0 flex z-0">
-        <LogoImg cls="w-[600px] opacity-20 relative left-[200px] md:left-0" color="#172554" />
+        <LogoImg
+          cls="w-[600px] opacity-20 relative left-[200px] md:left-0"
+          color="#172554"
+        />
       </div>
 
       <Container cls="flex-col mx-auto w-full z-10">

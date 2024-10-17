@@ -13,7 +13,7 @@ function Testimonials() {
           <div className="border-0 lg:border-r-2 border-p19 border-solid">
             {tData.slice(0, 3).map((data, index) => {
               return (
-                <div className="relative lg:py-[100px]">
+                <div className="relative lg:py-[100px]" key={index}>
                   <Testimonial
                     name={data.name}
                     description={data.description}
@@ -34,7 +34,7 @@ function Testimonials() {
           <div>
             {tData.slice(3).map((data, index) => {
               return (
-                <div className="relative lg:py-[100px]">
+                <div className="relative lg:py-[100px]" key={index}>
                   <Testimonial
                     name={data.name}
                     description={data.description}

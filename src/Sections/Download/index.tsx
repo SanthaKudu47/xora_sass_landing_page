@@ -1,5 +1,5 @@
 import { Container } from "../../components/nav/common/Container";
-import logo from "../../../public/xora.svg";
+import logo from "/xora.svg";
 import PlatformIcon from "./PlatformIcon";
 import {
   GlobeIcon,
@@ -8,7 +8,7 @@ import {
   XboxIcon,
 } from "../../assets/svg/apple";
 
-import screen from "../../../public/screen.jpg";
+import screen from "/screen.jpg?url";
 
 export default function Download() {
   return (

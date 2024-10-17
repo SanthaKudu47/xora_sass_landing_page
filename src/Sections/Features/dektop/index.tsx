@@ -3,8 +3,8 @@ import Caption from "../../../components/nav/common/Caption";
 import CaptionV1 from "../../../components/nav/common/CaptionV1/CaptionV1";
 import { Container } from "../../../components/nav/common/Container";
 
-import feature1Img from "/public/feature-1.png";
-import feature2Img from "/public/feature-2.png";
+import feature1Img from "/feature-1.png";
+import feature2Img from "/feature-2.png";
 
 import { data, detailData } from "../data";
 

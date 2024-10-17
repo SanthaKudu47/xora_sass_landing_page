@@ -8,7 +8,7 @@ function DesktopNav() {
     <div
       className={`left-0 right-0 ${
         isScrolled ? "h-[88px] bg-desktopNav/90 " : "h-[136px] bg-desktopNav/10"
-      } flex top-0 fixed mx-auto justify-center backdrop-blur-sm  z-20 transition-[height,background] duration-300 delay-0 ease-out`}
+      } flex top-0 fixed mx-auto justify-center backdrop-blur-sm  z-50 transition-[height,background] duration-300 delay-0 ease-out`}
     >
       <Container cls="flex-row items-center justify-center min-w-[1252px]">
         <div className="font-baseFont text-tp1 font-bold uppercase text-[16px] w-full">

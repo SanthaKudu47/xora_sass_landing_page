@@ -12,22 +12,26 @@ function NavMobile() {
   const dispatch = useDispatch();
   const isScrolled = useIsScrolled();
 
-  console.log("isC", isScrolled);
-
   const menuClickHandler = function () {
     isOpened === false
       ? dispatch("common", { type: "menuOpened" })
       : dispatch("common", { type: "menuClosed" });
   };
-  console.log("Nav rendering...", isScrolled);
+
   return (
     <>
-      <div className="left-0 right-0  fixed h-[88px] top-0 px-4 flex items-center z-30 ">
-        <div className="flex w-full my-auto items-center justify-between">
-          <img src={logoImage} alt="logo_img" width={116} height={40} />
+      <div className="left-0 right-0  fixed h-[88px] top-0  flex flex-row items-center z-50  w-screen px-4 overflow-hidden">
+        <div className="flex my-auto flex-row justify-between w-screen">
+          <img
+            src={logoImage}
+            alt="logo_img"
+            width={116}
+            height={40}
+            className="flex"
+          />
 
           <button
-            className="w-[40px] h-[40px] rounded-full  border-solid border-2 border-p3 flex justify-center items-center cursor-pointer"
+            className="w-[40px] h-[40px]  rounded-full  border-solid border-2 border-p3 flex justify-center items-center cursor-pointer"
             onClick={menuClickHandler}
           >
             <img

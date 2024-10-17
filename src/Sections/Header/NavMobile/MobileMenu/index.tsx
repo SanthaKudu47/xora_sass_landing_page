@@ -13,7 +13,7 @@ function MobileMenu({ isOpened = false }: { isOpened: boolean }) {
   return (
     <>
       {isOpened && (
-        <div className="flex w-full  h-screen z-20  overflow-y-hidden bg-p5">
+        <div className="flex w-screen  h-screen z-20  overflow-y-hidden bg-p5">
           <div className="flex absolute inset-0">
             <div className="relative w-full my-auto h-auto z-20">
               <nav className="ml-14">

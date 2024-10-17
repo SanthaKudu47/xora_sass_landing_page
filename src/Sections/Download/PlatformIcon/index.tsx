@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import lines from "../../../../public/lines.svg";
+import lines from "/lines.svg";
 import { Chip, IosIcon } from "../../../assets/svg/apple";
 
 import "./styles.css";

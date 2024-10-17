@@ -1,12 +1,16 @@
 import { priceCardData } from "../../data/data";
 import Card from "../Card";
 
-export default function PriceCardsMobile({ subscriptionType='monthly'}:{ subscriptionType:'monthly'|'annually'}) {
+export default function PriceCardsMobile({
+  subscriptionType = "monthly",
+}: {
+  subscriptionType: "monthly" | "annually";
+}) {
   return (
     <>
       <div className="flex flex-row gap-5  absolute left-0 right-0 overflow-x-scroll pt-10 px-5">
         <Card
-          subPlan={"monthly"}
+          subPlan={subscriptionType}
           caption={priceCardData[1].caption}
           features={priceCardData[1].features}
           price={priceCardData[1].price}
@@ -17,7 +21,7 @@ export default function PriceCardsMobile({ subscriptionType='monthly'}:{ subscri
           place="left"
         />
         <Card
-          subPlan={"monthly"}
+          subPlan={subscriptionType}
           caption={priceCardData[0].caption}
           features={priceCardData[0].features}
           price={priceCardData[0].price}
@@ -28,7 +32,7 @@ export default function PriceCardsMobile({ subscriptionType='monthly'}:{ subscri
           place="middle"
         />
         <Card
-          subPlan={"monthly"}
+          subPlan={subscriptionType}
           caption={priceCardData[2].caption}
           features={priceCardData[2].features}
           price={priceCardData[2].price}

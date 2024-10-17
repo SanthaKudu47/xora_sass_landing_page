@@ -1,10 +1,4 @@
-import {
-  useContext,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import { useContext, useLayoutEffect, useRef, useState } from "react";
 
 import { GlobalStore } from "../context";
 
@@ -14,7 +8,7 @@ export default function useSelector(selectorFn: any, layerName: string) {
     forceRender((val) => val + 1);
   });
   const [, forceRender] = useState(0);
-  const updated = store;
+  // const updated = store;
   const targetLayer = store[layerName];
   const selectedValue = selectorFn(targetLayer);
 
