@@ -18,10 +18,10 @@ function MobileMenu({ isOpened = false }: { isOpened: boolean }) {
             <div className="relative w-full my-auto h-auto z-20">
               <nav className="ml-14">
                 <ul>
-                  <NavLink text={"Features"} target="" />
-                  <NavLink text={"Pricing"} target="" />
-                  <NavLink text={"FAQ"} target="" />
-                  <NavLink text={"Download"} target="" />
+                  <NavLink text={"Features"} target="section2" />
+                  <NavLink text={"Pricing"} target="section3" />
+                  <NavLink text={"FAQ"} target="section4" />
+                  <NavLink text={"Download"} target="section6" />
                 </ul>
               </nav>
             </div>

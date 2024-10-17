@@ -3,7 +3,8 @@ import FeaturesMobileView from "./mobile";
 
 function Features() {
   return (
-    <div>
+    <div className="relative">
+      <div className="absolute top-0 -mt-[600px] lg:-mt-[538px]" id="section2" />
       <div className="flex md:hidden">
         <FeaturesMobileView />
       </div>

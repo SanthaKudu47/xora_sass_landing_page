@@ -13,7 +13,10 @@ import Logo from "/faq-logo.svg";
 
 function Footer() {
   return (
-    <div className="overflow-hidden flex-col relative mx-auto flex w-full">
+    <div
+      className="overflow-hidden flex-col relative mx-auto flex w-full"
+      id="section7"
+    >
       <div className="absolute -top-[150px] md:top-[300px] lg:-top-[150px] justify-end md:justify-center left-0 right-0 flex z-0">
         <LogoImg
           cls="w-[600px] opacity-20 relative left-[200px] md:left-0"

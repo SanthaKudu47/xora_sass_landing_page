@@ -13,26 +13,36 @@ function DesktopNav() {
       <Container cls="flex-row items-center justify-center min-w-[1252px]">
         <div className="font-baseFont text-tp1 font-bold uppercase text-[16px] w-full">
           <ul className="inline-flex gap-4 items-center w-full justify-between">
-            <li>features</li>
+            <li>
+              <a href="#section2">features</a>
+            </li>
             <li>
               <div className="rounded-full bg-dotColor w-[6px] h-[6px]"></div>
             </li>
-            <li>pricing</li>
             <li>
-              <div className="my-auto px-2">
-                <img
-                  src={xora}
-                  alt="xora_logo"
-                  width={`${isScrolled ? 100 : 150}`}
-                  className={`origin-center transition-[width] duration-300 delay-0 ease-out`}
-                />
-              </div>
+              <a href="#section3">pricing</a>
             </li>
-            <li>faq</li>
+            <li>
+              <a href="#section1">
+                <div className="my-auto px-2">
+                  <img
+                    src={xora}
+                    alt="xora_logo"
+                    width={`${isScrolled ? 100 : 150}`}
+                    className={`origin-center transition-[width] duration-300 delay-0 ease-out`}
+                  />
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#section4">faq</a>
+            </li>
             <li>
               <div className="rounded-full bg-dotColor w-[6px] h-[6px]"></div>
             </li>
-            <li>download</li>
+            <li>
+              <a href="#section6">download</a>
+            </li>
           </ul>
         </div>
       </Container>

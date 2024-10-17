@@ -68,7 +68,7 @@ const qaData = [
 
 export default function QA() {
   return (
-    <div>
+    <div id="section4">
       <QAHeader />
       <div className="relative flex  mx-auto flex-col">
         <div className="flex border-t-2 border-solid border-p19">

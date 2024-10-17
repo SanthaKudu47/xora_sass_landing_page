@@ -4,7 +4,7 @@ import heroImage from "/hero.png";
 
 function Hero() {
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden" id="section1">
       
       <div className="relative flex w-full h-auto mt-[88px] sm:mt-[136px]  px-5 flex-col md:flex-row max-w-[1252px] mx-auto pt-[60px] pb-[620px]">
         <div className="flex flex-col my-auto z-10 max-w-[380px]">
