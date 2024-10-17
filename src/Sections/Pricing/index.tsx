@@ -8,7 +8,7 @@ export default function Pricing() {
     "monthly"
   );
   return (
-    <div className="relative h-[1165px] lg:h-[1220px]">
+    <div className="relative h-[1165px] lg:h-[1220px]" id="section3">
       <Container cls="flex-col items-center mx-auto relative">
         <div className="flex relative">
           <div className="w-full overflow-hidden pb-[250px]  px-5 sm:px-20 -mt-9 lg:mt-0">

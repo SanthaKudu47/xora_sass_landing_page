@@ -12,7 +12,7 @@ import screen from "/screen.jpg?url";
 
 export default function Download() {
   return (
-    <div className="flex flex-col bg-gradient-to-t from-p20 to-btnHoveredG2 w-full relative overflow-hidden pb-[100px]">
+    <div className="flex flex-col bg-gradient-to-t from-p20 to-btnHoveredG2 w-full relative overflow-hidden pb-[100px]" id="section6">
       <div className="grid grid-cols-2 lg:grid-cols-3 w-full max-w-[1252px] relative mx-auto">
         <div className="col-span-1 flex w-full" />
         <div className="col-span-2 flex w-full relative justify-center h-[100px] pr-[22px]">

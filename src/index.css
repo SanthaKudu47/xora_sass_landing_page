@@ -5,6 +5,7 @@
 @layer base {
   html {
     @apply bg-p1;
+    
   }
 
   .mobile_nav_bg {

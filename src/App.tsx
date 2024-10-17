@@ -18,9 +18,11 @@ function App() {
   useEffect(() => {
     if (isOpened) {
       scrollY = window.scrollY;
+      document.body.style.scrollBehavior = "auto";
       document.body.style.position = "fixed";
     } else {
       document.body.style.position = "";
+      document.body.style.scrollBehavior = "smooth";
       window.scrollTo(0, +scrollY);
     }
   }, [isOpened]);
